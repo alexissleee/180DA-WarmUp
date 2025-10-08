@@ -4,3 +4,6 @@ if __name__ == '__main__':
         print(x + " is the best class ever")
     else:
         print("Bruins are the best!")
+
+
+# made a change here for week 2 lab
