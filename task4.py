@@ -1,3 +1,6 @@
+# adapted code from https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_gui/py_video_display/py_video_display.html
+# improved code by adding the bounding rects and contours
+
 import numpy as np
 import cv2
 
@@ -25,7 +28,7 @@ while(True):
     # create mask for ipad purple
     mask = cv2.inRange(hsv, lower_purple, upper_purple)
  
-    # Find contours in the mask
+    # find contours in the mask
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     for cnt in contours:
@@ -42,3 +45,5 @@ while(True):
 # When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()
+
+# still able to detect different brightnesses and lighting conditions of purple
